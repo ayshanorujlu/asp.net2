@@ -1,0 +1,48 @@
+﻿@model ProductAddViewModel
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+    <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+
+        <form asp-controller="Product" asp-action="Add" method="post">
+            <section>
+                <label asp-for="Product.Name"></label>
+                <input asp-for="Product.Name" />
+                <span style="color:red" asp-validation-for="Product.Name"></span>
+            </section>
+
+            <section>
+                <label asp-for="Product.Description"></label>
+                <input asp-for="Product.Description" />
+                <span style="color:red" asp-validation-for="Product.Description"></span>
+            </section>
+
+            <section>
+                <label asp-for="Product.Price"></label>
+                <input asp-for="Product.Price" />
+                <span style="color:red" asp-validation-for="Product.Price"></span>
+            </section>
+
+            <section>
+                <label asp-for="Product.Discount"></label>
+                <input asp-for="Product.Discount" />
+                <span style="color:red" asp-validation-for="Product.Discount"></span>
+            </section>
+            <section>
+                <label asp-for="Product.ImagePath"></label>
+                <input asp-for="Product.ImagePath" />
+                <span style="color:red" asp-validation-for="Product.ImagePath"></span>
+            </section>
+
+            <section>
+                <button class="btn btn-primary" type="submit"> Submit</button>
+            </section>
+        </form>
+
+    </section>
+</body>
+</html>
